@@ -1,0 +1,32 @@
+.footer-logo {
+    @apply flex items-center justify-start text-gray-97;
+    font-size: 11px;
+}
+.footer-logo img {
+    width: 30px;
+    @apply mr-2;
+}
+.footer {
+    border-top: 1px solid;
+    @apply pt-3 pb-2 border-gray-97 border-opacity-30;
+}
+.footer .container-center {
+    @apply flex items-center justify-between;
+}
+.footer-nav ul {
+    @apply flex items-center justify-between;
+}
+.footer-nav li {
+    border-left: 1px solid;
+    line-height: 12px;
+    @apply pl-4 pr-4 border-gray-97 backdrop-opacity-30;
+}
+.footer-nav li:first-child {
+    border-left: 0;
+}
+.footer-nav li:last-child {
+    padding-right: 0;
+}
+.footer-nav a {
+    @apply text-gray-97;
+}
