@@ -1,0 +1,25 @@
+.productPage {
+    height: 100vh;
+    @apply flex flex-col items-stretch;
+}
+.header,
+.content,
+.footer {
+    flex-shrink: 0;
+}
+.content {
+    flex-grow: 1;
+}
+
+.products {
+    @apply pt-12 pb-12 ;
+}
+.products h2 {
+    @apply text-center text-2xl pb-4;
+}
+.product-list {
+    @apply  -ml-3 -mr-3 flex justify-start flex-wrap;
+}
+.product-list.scrollable {
+    @apply  h-450 overflow-y-scroll;
+}

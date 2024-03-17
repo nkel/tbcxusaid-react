@@ -11,7 +11,7 @@ function Header(){
                 </div>
                 <nav className="nav-menu menu">
                     <ul>
-                        { menu.map((item, index)=> <li className={ index===0 ? "menu-item active" : "menu-item"}><a href={item.href}>{item.name}</a></li> )}
+                        { menu.map((item, index)=> <li className={ index===0 ? "menu-item active" : "menu-item"} key={item.id}><a href={item.href}>{item.name}</a></li> )}
                     </ul>
                 </nav>
                 <div className="header-lang">

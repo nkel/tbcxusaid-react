@@ -1,0 +1,3 @@
+.btn-primary {
+    @apply w-2/12 rounded-md pt-2 pb-2 text-w uppercase bg-primary;
+}
