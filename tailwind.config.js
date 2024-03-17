@@ -27,6 +27,9 @@ module.exports = {
       warning: '#FBAD29'
     },
     extend: {
+      height: {
+        '450': '450px',
+      },
       boxShadow: {
         '3-20': '0 3px 20px #DBDBDB80',
       },

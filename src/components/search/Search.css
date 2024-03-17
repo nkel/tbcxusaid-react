@@ -1,0 +1,7 @@
+.search {
+    border: 1px solid;
+    @apply bg-w pt-2 pb-2 mt-5 border-gray-97 border-opacity-30 rounded-md pl-4 pr-4;
+}
+.search input {
+    @apply w-10/12 pr-4;
+}

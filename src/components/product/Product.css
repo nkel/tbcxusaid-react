@@ -1,0 +1,32 @@
+.product-item {
+    @apply pl-3 pr-3 pb-6 basis-full sm:basis-6/12 lg:basis-4/12 2xl:basis-3/12;
+}
+.product-item--caption {
+    @apply flex justify-between items-center;
+}
+.product-item--content {
+    @apply bg-w rounded-lg overflow-hidden p-4 shadow-3-20;
+}
+.product-item--img {
+    @apply w-full h-40 rounded-lg overflow-hidden relative cursor-pointer;
+}
+.product-item--img:after {
+    content:"";
+    @apply flex z-10 w-full h-40 bg-black bg-opacity-45 absolute top-0;
+    transition: 0.5s;
+}
+.product-item--img:hover:after {
+    @apply bg-opacity-0;
+}
+.product-item--img img {
+    @apply object-cover w-full h-40;
+}
+.product-item--title {
+    @apply mt-4 mb-4 text-2xl;
+}
+.product-item--desc {
+    @apply text-gray-97 pb-2 line-clamp-6 overflow-hidden h-36;
+}
+.btn-add {
+    @apply w-full flex items-center justify-between text-w bg-primary hover:bg-opacity-75 pt-2 pb-2 pl-4 pr-4 rounded-lg mt-2.5;
+}

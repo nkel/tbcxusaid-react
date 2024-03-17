@@ -14,3 +14,13 @@ main {
     margin-top: 100px;
     margin-bottom: 60px;
 }
+
+.scrollable::-webkit-scrollbar {
+    width: 5px;
+}
+.scrollable::-webkit-scrollbar-track {
+    @apply bg-gray-f8;
+}
+.scrollable::-webkit-scrollbar-thumb {
+    @apply bg-primary;
+}

@@ -1,4 +1,5 @@
 import './Newsletter.css';
+import Button from "../button/Button";
 
 function Newsletter(){
     return (
@@ -7,7 +8,7 @@ function Newsletter(){
             <span> Stay uo tp date with our latest news</span>
             <form>
                 <input type="text" placeholder="Your email address"/>
-                <button> subscribe</button>
+                <Button text='Subscribe' />
             </form>
         </div>
     );
