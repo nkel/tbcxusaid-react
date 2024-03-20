@@ -1,26 +1,28 @@
 import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from "./components/pages/home/Home";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import Newsletter from "./components/newletter/Newsletter";
-import articles from "./fakeData/articles";
-import Article from "./components/article/Article";
+import Products from "./components/pages/products/Products";
+import Contact from "./components/pages/contact/Contact";
 
 function App() {
   return (
-    <>
-        <Header />
-        <main className="container-center">
-            <div className="article">
-                <h2 className="article-title">News</h2>
-                <div className="article-items">
-                { articles.map(article => <Article img={article.img} title={article.title} desc={article.desc} />)}
-                </div>
-            </div>
-        <Newsletter />
-        </main>
-        <Footer />
-    </>
-  );
+      <div className="wrapper">
+          <Header/>
+          <main className="content container-center">
+              <BrowserRouter>
+                  <Routes>
+                      <Route index element={<Home />}/>
+                      <Route path="/" element={<Home />}/>
+                      <Route path="/products" element={<Products />}/>
+                      <Route path="/contact" element={<Contact />}/>
+                  </Routes>
+              </BrowserRouter>
+          </main>
+          <Footer/>
+      </div>
+);
 }
 
 export default App;

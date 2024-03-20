@@ -1,16 +1,3 @@
-.productPage {
-    height: 100vh;
-    @apply flex flex-col items-stretch;
-}
-.header,
-.content,
-.footer {
-    flex-shrink: 0;
-}
-.content {
-    flex-grow: 1;
-}
-
 .products {
     @apply pt-12 pb-12 ;
 }
