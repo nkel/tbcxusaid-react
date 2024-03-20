@@ -2,7 +2,7 @@ const menu = [
     {
         id: 1,
         name: "home",
-        href: "#"
+        href: "/"
     },
     {
         id: 2,
@@ -12,7 +12,7 @@ const menu = [
     {
         id: 3,
         name: "products",
-        href: "#"
+        href: "/products"
     },
     {
         id: 4,
@@ -22,7 +22,7 @@ const menu = [
     {
         id: 5,
         name: "Contact",
-        href: "#"
+        href: "/contact"
     },
 ]
 

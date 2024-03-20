@@ -10,11 +10,6 @@
 body {
     @apply bg-bg-f2;
 }
-main {
-    margin-top: 100px;
-    margin-bottom: 60px;
-}
-
 .scrollable::-webkit-scrollbar {
     width: 5px;
 }
