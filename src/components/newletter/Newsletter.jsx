@@ -8,7 +8,7 @@ function Newsletter(){
             <span> Stay uo tp date with our latest news</span>
             <form>
                 <input type="text" placeholder="Your email address"/>
-                <Button text='Subscribe' />
+                <Button text='Subscribe' className="w-2/12"/>
             </form>
         </div>
     );

@@ -20,6 +20,11 @@ const menu = [
         href: "#"
     },
     {
+        id: 6,
+        name: "blog",
+        href: "/blog"
+    },
+    {
         id: 5,
         name: "Contact",
         href: "/contact"

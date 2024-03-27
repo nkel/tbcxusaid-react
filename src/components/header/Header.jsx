@@ -1,7 +1,7 @@
 import menu from "../../fakeData/menu";
 import logo from "../../logo.svg";
 import './Header.css';
-import React from "react";
+import {Link} from "react-router-dom";
 function Header(){
     return (
         <div className="header">
@@ -11,10 +11,11 @@ function Header(){
                     <h1>React App</h1>
                 </div>
                 <nav className="nav-menu menu">
-
                     <ul>
                         { menu.map(item=>
-                            <li className={ window.location.pathname===item.href ? "menu-item active" : "menu-item"} key={item.id}><a href={item.href}>{item.name}</a></li>
+                            <li className={ window.location.pathname===item.href ? "menu-item active" : "menu-item"} key={item.id}>
+                                <Link to={item.href} ac>{item.name}</Link>
+                            </li>
                         )}
                     </ul>
                 </nav>

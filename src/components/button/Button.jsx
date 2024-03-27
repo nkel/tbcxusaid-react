@@ -1,5 +1,5 @@
 import "./Button.css";
-function Button({text}){
-    return <button className='btn-primary'>{text}</button>;
+function Button({text, className = 'w-full'}){
+    return <button className={`btn-primary ${ className }`}>{text}</button>;
 }
 export default Button;

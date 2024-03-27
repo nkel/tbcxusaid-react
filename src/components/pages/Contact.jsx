@@ -1,14 +1,13 @@
-import './Contact.css';
-import Button from "../../button/Button";
+import Button from "../button/Button";
 function Contact(){
     return(
         <>
             <h2 className="text-2xl mb-8"> Contact </h2>
             <div className="flex justify-start items-start">
 
-            <div className="contactInfo w-5/12">
-                <address>
-                    <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            <div className="contactInfo w-5/12 flex flex-col">
+                <address className="flex justify-start items-center mb-5">
+                    <svg fill="#09B188" xmlns="http://www.w3.org/2000/svg"
                          width="20px" viewBox="0 0 395.71 395.71">
                     <g>
                         <path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
@@ -17,17 +16,17 @@ function Contact(){
                             c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z"/>
                     </g>
                     </svg>
-                    Tbisili, Lisi
+                    <span  className="ml-4">Tbisili, Lisi</span>
                 </address>
-                <a href="mailto:">
-                    <svg width="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <a href="mailto:" className="flex justify-start items-center mb-5">
+                    <svg width="20px" fill="#09B188" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.60175 4.20114C2.14997 3.47258 3.02158 3 4 3H20C20.9784 3 21.85 3.47258 22.3982 4.20113L12 11.7635L1.60175 4.20114Z" fill="#09B188"/>
                         <path d="M1 6.2365V18C1 19.6523 2.34772 21 4 21H20C21.6523 21 23 19.6523 23 18V6.23649L13.1763 13.381C12.475 13.891 11.525 13.891 10.8237 13.381L1 6.2365Z" fill="#09B188"/>
                     </svg>
-
-                    ReactxUsaid@gmail.com</a>
-                <span>
-                    <svg height="20px" xmlns="http://www.w3.org/2000/svg"
+                    <span className="ml-4">ReactxUsaid@gmail.com</span>
+                    </a>
+                <span className="flex justify-start items-center mb-5">
+                    <svg height="20px" fill="#09B188" xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 512 512">
                         <g>
                             <path className="st0" d="M256,47.18C127.063,47.18,0,97.628,0,155.555c0,49.742,0,54.334,0,54.644c0,13.168,10.67,23.838,23.838,23.838
@@ -43,12 +42,13 @@ function Contact(){
                                 v-33.92H214.863z M214.863,314.465v33.921H180.95v-33.921H214.863z M214.863,260.833v33.913H180.95v-33.913H214.863z"/>
                         </g>
                     </svg>
-                    (+995) 555 55 55 55</span>
+                    <span className="ml-4">(+995) 555 55 55 55</span>
+                </span>
             </div>
-            <div className="contactForm">
-                <input type="text" placeholder="Subject"/>
-                <input type="email" placeholder="Email"/>
-                <textarea cols="30" rows="10"> Message Text </textarea>
+            <div className="contactForm flex flex-col items-stretch justify-stretch w-7/12">
+                <input type="text" placeholder="Subject" className="bg-w pt-2 pb-2 mb-5 border-gray-97 border border-opacity-30 rounded-md pl-4 pr-4"/>
+                <input type="email" placeholder="Email" className="bg-w pt-2 pb-2 mb-5 border-gray-97 border border-opacity-30 rounded-md pl-4 pr-4"/>
+                <textarea cols="30" rows="10" className="bg-w pt-2 pb-2 mb-5 border-gray-97 border border-opacity-30 rounded-md pl-4 pr-4"> Message Text </textarea>
                 <Button text='Send'/>
             </div>
             </div>
