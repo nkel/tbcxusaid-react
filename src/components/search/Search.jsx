@@ -4,7 +4,7 @@ function Search(){
     return (
             <div className="search">
                 <input type="text" placeholder="Search Product"/>
-                <Button text='Search' />
+                <Button text='Search' className="w-2/12"/>
             </div>
     );
 }

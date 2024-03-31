@@ -1,15 +1,20 @@
 import './Product.css';
-function Product({img, title, desc}){
+function Product({id, price, image, title, description, color}){
     return (
-        <div className="product-item">
+        <div className="product-item" key={id}>
             <div className="product-item--content">
                 <div className="product-item--img">
                     <img
-                        src={img.src}
-                        alt={img.alt}/>
+                        src={image}
+                        alt={title}/>
                 </div>
                 <h3 className="product-item--title">{title}</h3>
-                <div className="product-item--desc">{desc}</div>
+                <div className="product-item--desc">{description}</div>
+                <div className="flex justify-between items-center">
+                    <span className="product-item--price"><small>₾</small>{price} </span>
+                    <span className="product-item--color" style={{backgroundColor: color}}></span>
+                </div>
+
                 <button className="btn-add">
                     <span>Add To Cart</span>
                     <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none"
