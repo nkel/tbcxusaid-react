@@ -1,0 +1,48 @@
+.profile-aside {
+    border: 1px solid;
+    @apply capitalize bg-w overflow-hidden border-gray-d3 lg:mb-0 relative block w-full;
+}
+.profile-cover {
+    @apply w-full h-32 relative;
+}
+.profile-cover img {
+    @apply w-full h-32 object-cover;
+}
+.profile-header {
+    @apply relative;
+}
+.profile-area {
+    margin-top: -47px;
+    @apply flex justify-center flex-col items-center;
+}
+.profile-area--user {
+    width: 94px;
+    height: 94px;
+    @apply overflow-hidden rounded-full bg-gray-f8 flex justify-center items-center;
+}
+.profile-area--user_wrapper {
+    width: 94px;
+    @apply relative;
+}
+
+.profile-area--userName {
+    @apply mt-4 mb-4 text-center pl-4 pr-4 font-bold;
+}
+.profile-area .edit-link {
+    width: 24px;
+    height: 24px;
+    right: 4px;
+    bottom: 4px;
+    @apply absolute flex justify-center items-center bg-primary rounded-full;
+}
+
+.profile-nav ul {
+    @apply flex flex-col;
+}
+.profile-nav--item a {
+    @apply flex w-full pt-3 pr-4 pb-3 pl-4;
+}
+.profile-nav--item a:hover,
+.profile-nav--item a.active{
+    @apply bg-gray-f8;
+}

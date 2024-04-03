@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .container-center {
+    @apply container mx-auto pl-4 sm:pl-7 pr-4 sm:pr-7;
   }
+}
+body {
+  @apply bg-bg-f2;
+}
+.scrollable::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollable::-webkit-scrollbar-track {
+  @apply bg-gray-f8;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+.wrapper {
+  min-height: 100vh;
+  @apply flex flex-col items-stretch;
+}
+.header,
+.content,
+.footer {
+  flex-shrink: 0;
+}
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input:focus {
+  border: 0;
+  outline: 0;
 }
