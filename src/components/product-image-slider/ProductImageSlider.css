@@ -1,0 +1,26 @@
+.image-gallery {
+    overflow: hidden;
+}
+.image-gallery .big-img{
+    width: 100%;
+    height: 300px;
+}
+.image-gallery .big-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.image-gallery .image-list {
+    @apply flex justify-start items-center flex-nowrap mt-3 overflow-x-auto;
+}
+.image-gallery .image-list--item {
+    width: 120px;
+    height: 100px;
+    @apply ml-1  mr-1 cursor-pointer overflow-hidden;
+}
+.image-gallery .image-list--item img {
+    width: 120px;
+    height: 100px;
+    @apply object-cover;
+}
+
