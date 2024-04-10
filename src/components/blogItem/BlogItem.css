@@ -2,23 +2,18 @@
     @apply pl-3 pr-3 pb-6 basis-full md:basis-6/12 lg:basis-4/12 2xl:basis-4/12;
 }
 .blog-item--content {
-    @apply bg-w rounded-lg overflow-hidden p-4 shadow-3-20 flex justify-start;
-}
-.blog-img {
-    @apply w-5/12;
+    @apply flex flex-col  bg-w rounded-lg overflow-hidden p-4 shadow-3-20 flex justify-start;
 }
 .blog-img img {
     @apply object-cover w-full h-40 rounded-lg overflow-hidden;
 }
+
 .blog-info {
-    @apply w-7/12 pl-4 flex justify-stretch flex-col;
+    @apply flex justify-stretch flex-col mt-4;
 }
 .blog-info h3 {
     @apply mt-4 mb-4 text-2xl capitalize leading-3;
 }
 .blog-desc {
-    @apply text-gray-97 pb-2 mt-1;
-}
-.blog-info .btn {
-    @apply mt-auto;
+    @apply text-gray-97 mb-4 mt-1 line-clamp-6 h-[140px];
 }

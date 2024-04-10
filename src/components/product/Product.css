@@ -22,7 +22,7 @@
     @apply object-contain w-full h-40;
 }
 .product-item--title {
-    @apply mt-4 mb-4 text-2xl;
+    @apply mt-4 mb-4 text-2xl line-clamp-1;
 }
 .product-item--price {
     @apply mt-4 mb-4 text-3xl text-warning;
@@ -35,7 +35,7 @@
 }
 
 .product-item--desc {
-    @apply text-gray-97 pb-2 line-clamp-2 overflow-hidden;
+    @apply text-gray-97 mb-2 line-clamp-2;
 }
 .btn-add {
     @apply w-full flex items-center justify-between text-w bg-primary hover:bg-opacity-75 pt-2 pb-2 pl-4 pr-4 rounded-lg mt-2.5;
