@@ -1,18 +1,20 @@
 import './Product.css';
-function Product({id, price, image, title, description, color}){
+import Link from "next/link";
+function Product({id, price, thumbnail, title, description, stock }){
     return (
         <div className="product-item" key={id}>
+            <Link href={`/products/${id}`} >
             <div className="product-item--content">
                 <div className="product-item--img">
                     <img
-                        src={image}
-                        alt={title}/>
+                        src={thumbnail}
+                        alt={title} />
                 </div>
                 <h3 className="product-item--title">{title}</h3>
                 <div className="product-item--desc">{description}</div>
                 <div className="flex justify-between items-center">
-                    <span className="product-item--price"><small>₾</small>{price} </span>
-                    <span className="product-item--color" style={{backgroundColor: color}}></span>
+                    <span className="product-item--price"><small>₾</small>{price}</span>
+                    <span className="product-item--stock text-gray-70">In Stock - <span className="text-primary">{stock}</span></span>
                 </div>
 
                 <button className="btn-add">
@@ -37,6 +39,7 @@ function Product({id, price, image, title, description, color}){
                     </svg>
                 </button>
             </div>
+            </Link>
         </div>
     );
 }

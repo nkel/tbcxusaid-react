@@ -1,0 +1,18 @@
+.product-detail {
+    min-height: calc(100vh - 180px);
+    @apply mt-10;
+}
+.page-detail--info {
+    @apply md:pl-10 lg:pl-20;
+}
+.page-detail--info .title {
+    @apply mb-4 text-2xl flex items-center justify-between;
+}
+.page-detail--info .description {
+    @apply mb-5 text-lg text-bg-20;
+}
+.page-detail--info .prices {
+    @apply mb-5 flex justify-between items-center;
+}
+
+

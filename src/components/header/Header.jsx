@@ -19,7 +19,7 @@ function Header(){
                     <ul>
                         { menu.map(item=>
                             <li className="menu-item"  key={item.id}>
-                                <Link ac href={item.href}>{item.name}</Link>
+                                <Link href={item.href}>{item.name}</Link>
                             </li>
                         )}
                     </ul>

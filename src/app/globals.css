@@ -39,3 +39,7 @@ input:focus {
   border: 0;
   outline: 0;
 }
+
+.btn {
+  @apply inline-flex text-lg rounded-lg pt-2 pb-2 pl-4 pr-4 text-w;
+}

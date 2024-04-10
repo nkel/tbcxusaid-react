@@ -1,7 +1,8 @@
 import "./BlogItem.css";
 import Button from "@/components/button/Button";
+import Link from "next/link";
 
-function BlogItem({ id, title, description , image, created_at }){
+function BlogItem({ id, name, description , image }){
     return (
 
             <div className="blog-item" key={id}>
@@ -11,13 +12,13 @@ function BlogItem({ id, title, description , image, created_at }){
                     </div>
                     <div className="blog-info">
                         <header>
-                            <h3>{title}</h3>
-                            <time>{(new Date(created_at)).toLocaleDateString()}</time>
+                            <h3>{name}</h3>
                         </header>
                         <div className="blog-desc"> {description} </div>
-                        <div className="btn">
-                            <Button text="სრულად" />
-                        </div>
+                        <Link href={`/blog/${id}`}>
+                            <Button text="Read More" />
+                        </Link>
+
                     </div>
                 </div>
             </div>

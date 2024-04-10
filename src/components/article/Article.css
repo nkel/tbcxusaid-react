@@ -14,8 +14,8 @@
     @apply object-cover w-full h-40;
 }
 .article-item--title {
-    @apply mt-4 mb-4 text-2xl;
+    @apply mt-4 mb-4 text-2xl line-clamp-1;
 }
 .article-item--desc {
-    @apply text-gray-97 pb-2;
+    @apply text-gray-97 line-clamp-6 h-[140px];
 }
