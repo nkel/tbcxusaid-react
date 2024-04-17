@@ -1,4 +1,3 @@
-import articles from "@/fakeData/articles";
 import Article from "@/components/article/Article";
 import Newsletter from "@/components/newletter/Newsletter";
 async function getArticle() {

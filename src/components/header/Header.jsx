@@ -2,6 +2,7 @@ import menu from "../../fakeData/menu";
 import './Header.css';
 import Image from "next/image";
 import Link from "next/link";
+import UserArea from "@/components/header/UserArea";
 function Header(){
     return (
         <div className="header">
@@ -17,8 +18,8 @@ function Header(){
                 </div>
                 <nav className="nav-menu menu">
                     <ul>
-                        { menu.map(item=>
-                            <li className="menu-item"  key={item.id}>
+                        {menu.map(item =>
+                            <li className="menu-item" key={item.id}>
                                 <Link href={item.href}>{item.name}</Link>
                             </li>
                         )}
@@ -32,6 +33,7 @@ function Header(){
                         height={20}
                     />
                 </div>
+                <UserArea />
             </div>
         </div>
     );

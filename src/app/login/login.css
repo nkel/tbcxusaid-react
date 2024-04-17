@@ -1,0 +1,30 @@
+.login {
+    @apply flex flex-col container lg:w-full pl-5 lg:pl-0 pr-5 lg:pr-0 mx-auto;
+}
+.login-container {
+    @apply flex justify-between w-full flex-col-reverse lg:flex-row;
+}
+.login-wrapper {
+    @apply bg-gray-f2 lg:h-screen flex items-center w-full lg:w-5/12 pt-16 lg:ml-7 pl-24 pr-24 ;
+}
+.login-title {
+    @apply text-black text-3xl mb-12 text-center lg:text-left;
+}
+.login-info {
+    background-image: url("../../../public/logo.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+        @apply w-full lg:w-7/12 pl-8 bg-gray-24;
+}
+.login-info--details {
+            @apply text-gray-f2 text-sm pt-24 lg:pt-0 text-opacity-60;
+        }
+.login-info--container {
+            @apply lg:h-screen flex flex-col justify-between  container lg:w-full mx-auto pb-6 lg:pt-16 mt-16 lg:mt-0;
+        }
+.login-suggest {
+        @apply flex flex-col-reverse lg:flex-col text-black lg:text-bg-20 pt-8 lg:pt-28;
+        span { @apply lg:text-2xl 2xl:text-3xl mt-14 lg:mt-0 text-gray-f2; }
+        h2 { @apply text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl mt-3 text-w; }
+    }
+
