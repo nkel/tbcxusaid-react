@@ -1,0 +1,60 @@
+.header-user_area {
+    @apply relative ml-6;
+}
+.header-user_area--main {
+        @apply flex justify-start items-center;
+    }
+.header-user_area--avatar {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        @apply rounded-full bg-gray-f8 flex justify-center items-center mr-3 overflow-hidden;
+    }
+.header-user_area--info {
+        @apply flex flex-col w-40 font-normal text-w;
+}
+.header-user_area--info_wrapper {
+            @apply relative justify-between flex items-center cursor-pointer;
+}
+.header-user_area--info_wrapper:after {
+                content: "";
+                width: 16px;
+                height: 16px;
+                flex: 0 0 16px;
+                background: url("../../../public/assets/arrow-down-w.svg") no-repeat center center;
+                background-size: 14px;
+                @apply flex justify-center items-center ml-4 opacity-80;
+            }
+.header-user_area--info_wrapper.active:after {
+                    @apply rotate-180;
+                }
+
+.header-user_area--dropdown {
+    top: 60px;
+    right: 12px;
+    @apply hidden absolute shadow-3-20 bg-w pt-5 pb-5 flex-col w-60;
+}
+.header-user_area--dropdown.active {
+            @apply flex;
+        }
+.header-user_area--dropdown ul {
+            @apply flex flex-col pt-2 pb-2;
+}
+.header-user_area--dropdown li {
+                @apply pt-2 pb-2 pl-5 pr-5 flex items-center justify-between text-nowrap;
+}
+.header-user_area--dropdown li:hover,
+.header-user_area--dropdown li.active {
+                    @apply bg-gray-f8 cursor-pointer;
+}
+.header-user_area--dropdown footer {
+    @apply flex flex-col items-start text-sm ml-5;
+}
+
+.header-user_area--dropdown footer .logOut-btn {
+    @apply flex justify-start items-center mt-3;
+}
+.header-user_area--dropdown footer .logOut-icon {
+                    background: #30475E;
+                    @apply rounded-lg p-2 flex mr-2;
+}

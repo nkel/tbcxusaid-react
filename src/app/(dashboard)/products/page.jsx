@@ -1,5 +1,5 @@
-import Button from "@/components/button/Button";
-import Product from "@/components/product/Product";
+import Button from "../../../components/button/Button";
+import Product from "../../../components/product/Product";
 
 async function getProductData() {
     const response = await fetch('https://dummyjson.com/products?limit=20');
