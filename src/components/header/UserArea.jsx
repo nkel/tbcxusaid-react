@@ -2,15 +2,11 @@
 import './UserArea.css';
 import {useState} from "react";
 import Link from "next/link";
-export default function UserArea(){
+export default function UserArea({username, handleLogOut}){
     const [active, setActive]= useState(false);
     const handleClick = ()=>{
         setActive(prevState => prevState=!prevState);
     }
-    const handleLogOut = ()=>{
-//        logOut();
-    }
-
 
     return (
         <div className="header-user_area">
@@ -26,7 +22,7 @@ export default function UserArea(){
                     </svg>
                 </div>
                 <div className={`header-user_area--info_wrapper ${(active)?"active":""}`} onClick={handleClick}>
-                <div className="header-user_area--info">username</div>
+                <div className="header-user_area--info">{username}</div>
             </div>
         </div>
     <div className={`header-user_area--dropdown ${(active)?"active":""}`}>
@@ -37,7 +33,7 @@ export default function UserArea(){
     </ul>
     <footer>
 
-        <button className="logOut-btn" onClick={handleLogOut}>
+        <button className="logOut-btn" onClick={() => handleLogOut()}>
           <span className="logOut-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <g transform="translate(-0.208)">
               <rect width="20" height="20" transform="translate(0.208)" fill="none"/>

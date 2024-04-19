@@ -1,8 +1,15 @@
 import './login.css';
 import {login} from "@/app/login/actions";
 import LoginForm from "@/components/login-form/LoginForm";
+import {cookies} from "next/headers";
+import {AUTH_COOKIE_KEY} from "@/constants";
+import {redirect} from "next/navigation";
 
 export default function Login(){
+    const cookieStore = cookies();
+    if(cookieStore.get(AUTH_COOKIE_KEY) !== undefined) {
+      redirect("/");
+    }
     const handleLogin = async (username, password)=> {
         'use server';
         await login(username, password);

@@ -3,7 +3,16 @@ import './Header.css';
 import Image from "next/image";
 import Link from "next/link";
 import UserArea from "@/components/header/UserArea";
+import {logOut} from "@/app/login/actions";
+import {cookies} from "next/headers";
+import {AUTH_COOKIE_USERNAME} from "@/constants";
 function Header(){
+    const cookieStore = cookies();
+    const username = JSON.parse(cookieStore.get(AUTH_COOKIE_USERNAME).value);
+    const handleLogOut = async ()=>{
+       "use server"
+        await logOut();
+    }
     return (
         <div className="header">
             <div className="header-container container-center">
@@ -33,7 +42,7 @@ function Header(){
                         height={20}
                     />
                 </div>
-                <UserArea />
+                <UserArea username={username} handleLogOut = {handleLogOut}/>
             </div>
         </div>
     );
