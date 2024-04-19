@@ -6,7 +6,6 @@ import {redirect} from "next/navigation";
 
 export default function DashboardLayout({ children }) {
     const cookieStore = cookies();
-    console.log(cookieStore.get(AUTH_COOKIE_KEY));
     if(cookieStore.get(AUTH_COOKIE_KEY) === undefined) {
       redirect("/login");
     }
