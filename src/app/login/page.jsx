@@ -1,5 +1,5 @@
 import './login.css';
-import {login} from "@/app/login/actions";
+import {login} from "@/app/actions";
 import LoginForm from "@/components/login-form/LoginForm";
 import {cookies} from "next/headers";
 import {AUTH_COOKIE_KEY} from "@/constants";

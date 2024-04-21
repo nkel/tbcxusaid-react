@@ -46,7 +46,7 @@ async function Products(){
         <>
             <div className="flex justify-between items-start">
                 <div className="w-3/12">
-                    <div className="productFilter">
+                    <div className="productFilter dark:text-w">
                         <h2 className="text-2xl mb-4">Filter Product</h2>
                         <div className="filter-item mb-8">
                             <h3 className="mb-2">By price</h3>
@@ -90,7 +90,7 @@ async function Products(){
 
                     <div className="products pt-12 pb-12">
                         <header className="flex justify-between items-center">
-                            <h2 className="text-center text-2xl pb-4">Products</h2>
+                            <h2 className="text-center text-2xl pb-4  dark:text-w">Products</h2>
                             <span
                                 className="text-md bg-warning rounded-md flex justify-center items-center pl-4 pr-4 text-w">- Items</span>
                         </header>

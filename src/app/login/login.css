@@ -5,10 +5,10 @@
     @apply flex justify-between w-full flex-col-reverse lg:flex-row;
 }
 .login-wrapper {
-    @apply bg-gray-f2 lg:h-screen flex items-center w-full lg:w-5/12 pt-16 lg:ml-7 pl-24 pr-24 ;
+    @apply lg:h-screen flex items-center w-full lg:w-5/12 pt-16 lg:ml-7 pl-24 pr-24 ;
 }
 .login-title {
-    @apply text-black text-3xl mb-12 text-center lg:text-left;
+    @apply text-black text-3xl mb-12 text-center lg:text-left dark:text-w;
 }
 .login-info {
     background-image: url("../../../public/logo.svg");

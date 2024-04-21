@@ -15,9 +15,17 @@
 .header-lang {
     @apply flex justify-start items-center ml-3;
 }
+.header-darkMode {
+    width: 30px;
+    height: 30px;
+    @apply flex justify-center items-center overflow-hidden ml-4;
+}
+.header-darkMode:hover {
+    opacity: 0.3;
+}
 
 .menu {
-    @apply hidden lg:flex ml-5 capitalize ml-auto;
+    @apply hidden lg:flex capitalize ml-auto;
 }
 .menu ul {
     @apply flex items-center justify-start;

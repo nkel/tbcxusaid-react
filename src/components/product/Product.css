@@ -1,11 +1,11 @@
 .product-item {
-    @apply pl-3 pr-3 pb-6 basis-full sm:basis-6/12 xl:basis-4/12;
+    @apply pl-3 pr-3 pb-6 basis-full sm:basis-6/12 xl:basis-4/12 ;
 }
 .product-item--caption {
     @apply flex justify-between items-center;
 }
 .product-item--content {
-    @apply bg-w rounded-lg overflow-hidden p-4 shadow-3-20;
+    @apply bg-w rounded-lg overflow-hidden p-4 shadow-3-20 dark:bg-gray-24;
 }
 .product-item--img {
     @apply w-full h-40 rounded-lg overflow-hidden relative cursor-pointer;
@@ -22,12 +22,12 @@
     @apply object-contain w-full h-40;
 }
 .product-item--title {
-    @apply mt-4 mb-4 text-2xl line-clamp-1;
+    @apply mt-4 mb-4 text-2xl line-clamp-1 dark:text-w;
 }
 .product-item--price {
     @apply mt-4 mb-4 text-3xl text-warning;
     small {
-        @apply text-lg text-bg-20 mr-2;
+        @apply text-lg text-bg-20 mr-2 dark:text-gray-f2;
     }
 }
 .product-item--color {

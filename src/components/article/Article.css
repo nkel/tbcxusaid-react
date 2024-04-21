@@ -5,7 +5,7 @@
     @apply pl-3 pr-3 pb-6 basis-full sm:basis-6/12 lg:basis-4/12 2xl:basis-3/12;
 }
 .article-item--content {
-    @apply bg-w rounded-lg overflow-hidden p-4 shadow-3-20;
+    @apply bg-w rounded-lg overflow-hidden p-4 shadow-3-20 dark:bg-gray-24;
 }
 .article-item--img {
     @apply w-full h-40 rounded-lg overflow-hidden ;
@@ -14,7 +14,7 @@
     @apply object-cover w-full h-40;
 }
 .article-item--title {
-    @apply mt-4 mb-4 text-2xl line-clamp-1;
+    @apply mt-4 mb-4 text-2xl line-clamp-1 dark:text-w;
 }
 .article-item--desc {
     @apply text-gray-97 line-clamp-6 h-[140px];

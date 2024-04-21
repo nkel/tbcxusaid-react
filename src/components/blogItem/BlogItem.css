@@ -2,7 +2,7 @@
     @apply pl-3 pr-3 pb-6 basis-full md:basis-6/12 lg:basis-4/12 2xl:basis-4/12;
 }
 .blog-item--content {
-    @apply flex flex-col  bg-w rounded-lg overflow-hidden p-4 shadow-3-20 flex justify-start;
+    @apply flex flex-col  bg-w rounded-lg overflow-hidden p-4 shadow-3-20 justify-start dark:bg-gray-24;
 }
 .blog-img img {
     @apply object-cover w-full h-40 rounded-lg overflow-hidden;
@@ -12,7 +12,7 @@
     @apply flex justify-stretch flex-col mt-4;
 }
 .blog-info h3 {
-    @apply mt-4 mb-4 text-2xl capitalize leading-3;
+    @apply mt-4 mb-4 text-2xl capitalize leading-3 dark:text-w;
 }
 .blog-desc {
     @apply text-gray-97 mb-4 mt-1 line-clamp-6 h-[140px];
