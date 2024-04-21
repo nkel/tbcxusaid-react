@@ -7,9 +7,6 @@
     @apply container mx-auto pl-4 sm:pl-7 pr-4 sm:pr-7;
   }
 }
-body {
-  @apply bg-bg-f2;
-}
 .scrollable::-webkit-scrollbar {
   width: 5px;
 }

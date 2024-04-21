@@ -2,8 +2,8 @@ import Button from "@/components/button/Button";
 export default  function Contact(){
     return(
         <>
-            <h2 className="text-2xl mb-8"> Contact </h2>
-            <div className="flex justify-start items-start">
+            <h2 className="text-2xl mb-8 dark:text-w"> Contact </h2>
+            <div className="flex justify-start items-start dark:text-w">
 
                 <div className="contactInfo w-5/12 flex flex-col">
                     <address className="flex justify-start items-center mb-5">

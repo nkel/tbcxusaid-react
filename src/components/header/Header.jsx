@@ -3,16 +3,20 @@ import './Header.css';
 import Image from "next/image";
 import Link from "next/link";
 import UserArea from "@/components/header/UserArea";
-import {logOut} from "@/app/login/actions";
+import {logOut, setTheme} from "@/app/actions";
 import {cookies} from "next/headers";
 import {AUTH_COOKIE_USERNAME} from "@/constants";
+import DarkModeSwitcher from "@/components/header/DarkModeSwitcher";
+
+
 function Header(){
     const cookieStore = cookies();
     const username = JSON.parse(cookieStore.get(AUTH_COOKIE_USERNAME).value);
     const handleLogOut = async ()=>{
-       "use server"
+        "use server"
         await logOut();
     }
+
     return (
         <div className="header">
             <div className="header-container container-center">
@@ -42,7 +46,8 @@ function Header(){
                         height={20}
                     />
                 </div>
-                <UserArea username={username} handleLogOut = {handleLogOut}/>
+                <DarkModeSwitcher />
+                <UserArea username={username} handleLogOut={handleLogOut}/>
             </div>
         </div>
     );
