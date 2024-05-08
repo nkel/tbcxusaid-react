@@ -1,11 +1,17 @@
 import "./ProfileAside.css";
 import Link from "next/link";
+import Image from "next/image";
 function ProfileAside(){
     return (
         <div className="profile-aside" >
             <div className="profile-header">
                 <div className="profile-cover">
-                    <img src="https://covertimeline.com/app/template/587.jpg" alt="" />
+                    <Image
+                        src="/assets/images/profile_cover.jpg"
+                        alt=""
+                        width={180}
+                        height={37}
+                    />
                 </div>
                 <div className="profile-area">
                     <div className="profile-area--user_wrapper">
