@@ -1,14 +1,20 @@
 import './Product.css';
 import Link from "next/link";
-function Product({id, price, thumbnail, title, description, stock }){
+import IProduct from "../../interfaces";
+import Image from "next/image";
+function Product({id, price, thumbnail, title, description, stock }: IProduct){
     return (
         <div className="product-item" key={id}>
             <Link href={`/products/${id}`} >
             <div className="product-item--content">
                 <div className="product-item--img">
-                    <img
+                    <Image
                         src={thumbnail}
-                        alt={title} />
+                        width={500}
+                        height={300}
+                        alt={title}
+                        className="w-full h-[300px] object-cover"
+                    />
                 </div>
                 <h3 className="product-item--title">{title}</h3>
                 <div className="product-item--desc">{description}</div>
