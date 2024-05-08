@@ -1,8 +1,9 @@
 import "./BlogItem.css";
-import Button from "@/components/button/Button";
 import Link from "next/link";
+import Button from "../button/Button";
+import IRecipes from "../../interfaces";
 
-function BlogItem({ id, name, description , image }){
+function BlogItem({ id, name, description , image } : IRecipes){
     return (
 
             <div className="blog-item" key={id}>
