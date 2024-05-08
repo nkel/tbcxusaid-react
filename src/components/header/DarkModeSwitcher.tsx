@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 export default function DarkModeSwitcher() {
     const [theme, setTheme] = useState('light')
 
-    const handleNightMode = (mode) => {
+    const handleNightMode = (mode: string) => {
         localStorage.setItem("theme", mode);
         document.documentElement.setAttribute('class', mode);
         setTheme(mode);

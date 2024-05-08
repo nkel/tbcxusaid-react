@@ -10,3 +10,12 @@ export default interface IArticle {
     title: string,
     body: string
 }
+
+export default interface IProduct {
+    id: number,
+    price: number,
+    thumbnail: string,
+    title: string,
+    description: string,
+    stock: number
+}

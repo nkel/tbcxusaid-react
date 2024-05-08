@@ -1,5 +1,6 @@
 import Button from "../../../../components/button/Button";
 import Product from "../../../../components/product/Product";
+import IProduct from "../../../../interfaces";
 
 async function getProductData() {
     const response = await fetch('https://dummyjson.com/products?limit=20');
@@ -98,7 +99,7 @@ async function Products(){
                         <div
                             className="product-list scrollable -ml-3 -mr-3 flex justify-start flex-wrap h-450 overflow-y-scroll">
                             {
-                                productsData.map( product =>
+                                productsData.map( (product : IProduct) =>
                                     <Product id={product.id}
                                              price={product.price}
                                              thumbnail={product.thumbnail}
