@@ -1,6 +1,5 @@
-import ProfileAside from "@/components/profileAside/ProfileAside";
-import ProfileInfo from "@/components/ProfileInfo/ProfileInfo";
-import Link from "next/link";
+import ProfileAside from "../../../../components/profileAside/ProfileAside";
+import ProfileInfo from "../../../../components/ProfileInfo/ProfileInfo";
 
 export default  function Profile(){
     return (

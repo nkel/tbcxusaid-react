@@ -5,3 +5,8 @@ export default interface IRecipes {
     image: string,
     instructions: string
 }
+export default interface IArticle {
+    id: number,
+    title: string,
+    body: string
+}
