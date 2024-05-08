@@ -1,15 +1,15 @@
 import "./pageDetail.css";
-import Stars from "@/components/stars/Stars";
-import ProductImageSlider from "@/components/product-image-slider/ProductImageSlider";
-async function getProduct(id) {
+import ProductImageSlider from "../../../../../components/product-image-slider/ProductImageSlider";
+import Stars from "../../../../../components/stars/Stars";
+import {number} from "prop-types";
+async function getProduct(id: number) {
     const response = await fetch(`https://dummyjson.com/products/${id}`);
     return await response.json();
 }
 
-async function ProductDetails({ params: { id } }){
-    const product = await getProduct(id);
-
-    return (
+async function ProductDetails({ params: { id } }:{params: { id: number}}){
+      const product = await getProduct( id );
+      return (
         <>
             <div className="flex justify-between items-start product-detail">
                 <div className="w-4/12">

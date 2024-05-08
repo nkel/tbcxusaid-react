@@ -1,8 +1,8 @@
-import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
 import {cookies} from "next/headers";
-import {AUTH_COOKIE_KEY} from "@/constants";
 import {redirect} from "next/navigation";
+import {AUTH_COOKIE_KEY} from "../../../constants";
+import Header from "../../../components/header/Header";
+import Footer from "../../../components/footer/Footer";
 
 export default function DashboardLayout({ children }) {
     const cookieStore = cookies();

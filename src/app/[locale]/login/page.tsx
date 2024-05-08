@@ -1,8 +1,8 @@
 import './login.css';
-import {login} from "@/app/actions";
-import LoginForm from "@/components/login-form/LoginForm";
+import {login} from "../actions";
+import LoginForm from "../../../components/login-form/LoginForm";
 import {cookies} from "next/headers";
-import {AUTH_COOKIE_KEY} from "@/constants";
+import {AUTH_COOKIE_KEY} from "../../../constants";
 import {redirect} from "next/navigation";
 
 export default function Login(){
@@ -10,7 +10,7 @@ export default function Login(){
     if(cookieStore.get(AUTH_COOKIE_KEY) !== undefined) {
       redirect("/");
     }
-    const handleLogin = async (username, password)=> {
+    const handleLogin = async (username:string, password:string)=> {
         'use server';
         await login(username, password);
     }

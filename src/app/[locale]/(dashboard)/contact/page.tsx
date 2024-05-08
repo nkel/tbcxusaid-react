@@ -1,4 +1,5 @@
-import Button from "@/components/button/Button";
+import Button from "../../../../components/button/Button";
+
 export default  function Contact(){
     return(
         <>
@@ -48,7 +49,7 @@ export default  function Contact(){
                 <div className="contactForm flex flex-col items-stretch justify-stretch w-7/12">
                     <input type="text" placeholder="Subject" className="bg-w pt-2 pb-2 mb-5 border-gray-97 border border-opacity-30 rounded-md pl-4 pr-4"/>
                     <input type="email" placeholder="Email" className="bg-w pt-2 pb-2 mb-5 border-gray-97 border border-opacity-30 rounded-md pl-4 pr-4"/>
-                    <textarea cols="30" rows="10" className="bg-w pt-2 pb-2 mb-5 border-gray-97 border border-opacity-30 rounded-md pl-4 pr-4"> Message Text </textarea>
+                    <textarea cols={30} rows={10} className="bg-w pt-2 pb-2 mb-5 border-gray-97 border border-opacity-30 rounded-md pl-4 pr-4"> Message Text </textarea>
                     <Button text='Send'/>
                 </div>
             </div>

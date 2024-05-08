@@ -1,5 +1,5 @@
 import {cookies} from "next/headers";
-import {AUTH_COOKIE_KEY, AUTH_COOKIE_USERNAME} from "@/constants";
+import {AUTH_COOKIE_KEY, AUTH_COOKIE_USERNAME} from "../../constants";
 import {redirect} from "next/navigation";
 
 export async function login(username, password){

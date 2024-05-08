@@ -2,15 +2,16 @@ import menu from "../../fakeData/menu";
 import './Header.css';
 import Image from "next/image";
 import Link from "next/link";
-import UserArea from "@/components/header/UserArea";
-import {logOut, setTheme} from "@/app/actions";
+import UserArea from "../../components/header/UserArea";
+import {logOut} from "../../app/[locale]/actions";
 import {cookies} from "next/headers";
-import {AUTH_COOKIE_USERNAME} from "@/constants";
-import DarkModeSwitcher from "@/components/header/DarkModeSwitcher";
+import {AUTH_COOKIE_USERNAME} from "../../constants";
+import DarkModeSwitcher from "../../components/header/DarkModeSwitcher";
 
 
 function Header(){
     const cookieStore = cookies();
+    // @ts-ignore
     const username = JSON.parse(cookieStore.get(AUTH_COOKIE_USERNAME).value);
     const handleLogOut = async ()=>{
         "use server"
