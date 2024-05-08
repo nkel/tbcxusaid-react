@@ -22,7 +22,7 @@ async function BlogDetails({ params: { id } } : {params: {id: number}}){
 
     return (
         <>
-            <div className="flex page-detail flex-col">
+            <div className="flex page-detail flex-col" key={blogItem.id}>
                 <h2 className="font-bold text-3xl uppercase mb-12 text-bg-20 text-center dark:text-gray-f2">
                     {blogItem.name}
                 </h2>
