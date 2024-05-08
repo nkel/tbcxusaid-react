@@ -2,6 +2,7 @@
 
 import "./ProductImageSlider.css";
 import {useState} from "react";
+import Image from "next/image";
 function ProductImageSlider({images}: {images: string[] }) {
 
      const [bigImage, setBigImage] = useState(images[0]);
@@ -13,12 +14,19 @@ function ProductImageSlider({images}: {images: string[] }) {
     <div className="image-gallery">
         <div className="big-img">
             <img src={bigImage} alt=""/>
+
         </div>
         <div className="image-list">
             {
                images.map( (src,index) => (
                     <div className="image-list--item" key={index}>
-                        <img src={src} alt="" onClick={handleClick}/>
+                        <Image
+                            src={src}
+                            alt=""
+                            width={180}
+                            height={37}
+                            onClick={handleClick}
+                        />
                     </div>
                    )
                )
