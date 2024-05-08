@@ -2,6 +2,7 @@
 import Article from "../../../components/article/Article";
 import Newsletter from "../../../components/newletter/Newsletter";
 import {IArticle} from "../../../interfaces";
+import {Fragment} from "react";
 
 async function getArticle() {
     const response = await fetch("https://dummyjson.com/posts?limit=32");
@@ -11,7 +12,7 @@ async function getArticle() {
 export default async  function Home() {
   const article = await getArticle();
   return (
-      <>
+      <Fragment key='homePage'>
       <div className="mt-12">
           <Newsletter />
       </div>
@@ -22,6 +23,6 @@ export default async  function Home() {
           </div>
         </div>
 
-      </>
+      </Fragment>
   );
 }

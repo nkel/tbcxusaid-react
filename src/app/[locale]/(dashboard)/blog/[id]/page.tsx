@@ -21,7 +21,6 @@ async function BlogDetails({ params: { id } } : {params: {id: number}}){
     const blogItem = await getBlog(id);
 
     return (
-        <>
             <div className="flex page-detail flex-col" key={blogItem.id}>
                 <h2 className="font-bold text-3xl uppercase mb-12 text-bg-20 text-center dark:text-gray-f2">
                     {blogItem.name}
@@ -44,9 +43,7 @@ async function BlogDetails({ params: { id } } : {params: {id: number}}){
                     { blogItem.ingredients.map( ( item: string[] ) => <li className="btn bg-warning mr-3 mt-4 text-nowrap">{item}</li> ) }
                 </ul>
             </div>
-        </>
     )
-        ;
 }
 
 export default BlogDetails;

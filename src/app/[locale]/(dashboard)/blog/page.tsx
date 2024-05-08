@@ -12,7 +12,7 @@ export default async function Blog(){
     const blog = await getBlog();
 
     return (
-        <div className="blog-wrapper pt-12 pb-12">
+        <div className="blog-wrapper pt-12 pb-12" key='blogPage'>
             <h2 className="text-center text-2xl pb-10 dark:text-w">Blog</h2>
             <div className="blog-list flex justify-start items-center flex-wrap">
                 { blog.recipes.map((item: IRecipes) => <BlogItem id={item.id} name={item.name} image={item.image} instructions={item.instructions} /> )}

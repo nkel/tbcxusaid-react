@@ -1,6 +1,7 @@
 import Button from "../../../../components/button/Button";
 import Product from "../../../../components/product/Product";
 import {IProduct} from "../../../../interfaces";
+import {Fragment} from "react";
 
 async function getProductData() {
     const response = await fetch('https://dummyjson.com/products?limit=20');
@@ -44,7 +45,7 @@ async function Products(){
     // }, 1200 );
 
     return (
-        <>
+        <Fragment key='productPage'>
             <div className="flex justify-between items-start">
                 <div className="w-3/12">
                     <div className="productFilter dark:text-w">
@@ -113,7 +114,7 @@ async function Products(){
                     </div>
                 </div>
             </div>
-        </>
+        </Fragment>
     );
 }
 export default Products;
