@@ -2,11 +2,12 @@
 
 import "./ProductImageSlider.css";
 import {useState} from "react";
-function ProductImageSlider({images}) {
-    const [bigImage, setBigImage] = useState(images[0]);
-    const handleClick = (e) => {
-        setBigImage((prevState) => (prevState = e.target.src));
-    }
+function ProductImageSlider({images}: {images: string[] }) {
+
+     const [bigImage, setBigImage ] = useState(images[0]);
+     const handleClick = (e: any ) => {
+         setBigImage(prevState => prevState = e.target.src);
+     }
 
     return (
     <div className="image-gallery">

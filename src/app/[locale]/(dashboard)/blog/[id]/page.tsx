@@ -1,20 +1,22 @@
+import IRecipes from "../../../../../interfaces";
+
 export async function generateStaticParams(){
     const response = await fetch(`https://dummyjson.com/recipes`)
     const recipes = await response.json();
 
-    const paths = recipes.recipes.map((recept) =>({
+    const paths = recipes.recipes.map((recept: IRecipes) =>({
         params: {id: `/blog/${recept.id}`}
     }))
     return paths;
 
 }
 
-async function getBlog(id) {
+async function getBlog(id:number) {
     const response = await fetch(`https://dummyjson.com/recipes/${id}`);
     return await response.json();
 }
 
-async function BlogDetails({ params: { id } }){
+async function BlogDetails({ params: { id } } : {params: {id: number}}){
     const blogItem = await getBlog(id);
 
     return (
@@ -32,7 +34,7 @@ async function BlogDetails({ params: { id } }){
                 </div>
                 <h3 className="font-bold uppercase mt-4 dark:text-gray-f2">Ingredientes</h3>
                 <ul className="flex justify-start flex-wrap">
-                    { blogItem.ingredients.map(item => <li className="btn bg-warning mr-3 mt-4 text-nowrap">{item}</li> ) }
+                    { blogItem.ingredients.map( ( item: string[] ) => <li className="btn bg-warning mr-3 mt-4 text-nowrap">{item}</li> ) }
                 </ul>
             </div>
         </>
