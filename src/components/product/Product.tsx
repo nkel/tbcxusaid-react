@@ -1,6 +1,6 @@
 import './Product.css';
 import Link from "next/link";
-import IProduct from "../../interfaces";
+import {IProduct} from "../../interfaces";
 import Image from "next/image";
 function Product({id, price, thumbnail, title, description, stock }: IProduct){
     return (

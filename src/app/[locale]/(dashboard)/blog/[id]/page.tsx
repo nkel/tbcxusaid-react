@@ -1,4 +1,4 @@
-import IRecipes from "../../../../../interfaces";
+import {IRecipes} from "../../../../../interfaces";
 import Image from "next/image";
 
 export async function generateStaticParams(){

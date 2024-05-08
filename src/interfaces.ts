@@ -1,17 +1,17 @@
-export default interface IRecipes {
+export interface IRecipes {
     id: number,
     name: string,
     ingredients?: string[]
     image: string,
     instructions: string
 }
-export default interface IArticle {
+export interface IArticle {
     id: number,
     title: string,
     body: string
 }
 
-export default interface IProduct {
+export interface IProduct {
     id: number,
     price: number,
     thumbnail: string,

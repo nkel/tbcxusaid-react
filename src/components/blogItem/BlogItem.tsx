@@ -1,10 +1,10 @@
 import "./BlogItem.css";
 import Link from "next/link";
 import Button from "../button/Button";
-import IRecipes from "../../interfaces";
+import {IRecipes} from "../../interfaces";
 import Image from "next/image";
 
-function BlogItem({ id, name, description , image } : IRecipes){
+function BlogItem({ id, name, instructions , image } : IRecipes){
     return (
 
             <div className="blog-item" key={id}>
@@ -21,7 +21,7 @@ function BlogItem({ id, name, description , image } : IRecipes){
                         <header>
                             <h3>{name}</h3>
                         </header>
-                        <div className="blog-desc"> {description} </div>
+                        <div className="blog-desc"> {instructions} </div>
                         <Link href={`/blog/${id}`}>
                             <Button text="Read More" />
                         </Link>

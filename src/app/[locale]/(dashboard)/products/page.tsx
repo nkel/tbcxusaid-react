@@ -1,6 +1,6 @@
 import Button from "../../../../components/button/Button";
 import Product from "../../../../components/product/Product";
-import IProduct from "../../../../interfaces";
+import {IProduct} from "../../../../interfaces";
 
 async function getProductData() {
     const response = await fetch('https://dummyjson.com/products?limit=20');

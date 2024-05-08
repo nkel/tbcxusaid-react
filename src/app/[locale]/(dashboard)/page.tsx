@@ -1,7 +1,7 @@
 
 import Article from "../../../components/article/Article";
 import Newsletter from "../../../components/newletter/Newsletter";
-import IArticle from "../../../interfaces";
+import {IArticle} from "../../../interfaces";
 
 async function getArticle() {
     const response = await fetch("https://dummyjson.com/posts?limit=32");
