@@ -4,7 +4,7 @@ import "./ProductImageSlider.css";
 import {useState} from "react";
 function ProductImageSlider({images}: {images: string[] }) {
 
-     const [bigImage, setBigImage ] = useState(images[0]);
+     const [bigImage, setBigImage] = useState(images[0]);
      const handleClick = (e: any ) => {
          setBigImage(prevState => prevState = e.target.src);
      }
@@ -16,11 +16,12 @@ function ProductImageSlider({images}: {images: string[] }) {
         </div>
         <div className="image-list">
             {
-               images.map(src =>
-                    <div className="image-list--item">
+               images.map( (src,index) => (
+                    <div className="image-list--item" key={index}>
                         <img src={src} alt="" onClick={handleClick}/>
                     </div>
-                )
+                   )
+               )
             }
         </div>
     </div>

@@ -1,4 +1,5 @@
 import IRecipes from "../../../../../interfaces";
+import Image from "next/image";
 
 export async function generateStaticParams(){
     const response = await fetch(`https://dummyjson.com/recipes`)
@@ -21,12 +22,18 @@ async function BlogDetails({ params: { id } } : {params: {id: number}}){
 
     return (
         <>
-            <div className="flex page-detail flex-col">
+            <div className="flex page-detail flex-col" key={blogItem.id}>
                 <h2 className="font-bold text-3xl uppercase mb-12 text-bg-20 text-center dark:text-gray-f2">
                     {blogItem.name}
                 </h2>
                 <div className="h-[300px] overflow-hidden rounded-2xl w-full mb-10">
-                    <img src={blogItem.image} alt="" className="w-full h-[300px] object-cover"/>
+                    <Image
+                        src={blogItem.image}
+                        alt=""
+                        width={500}
+                        height={300}
+                        className="w-full h-[300px] object-cover"
+                    />
                 </div>
 
                 <div className="text-lg dark:text-w">
