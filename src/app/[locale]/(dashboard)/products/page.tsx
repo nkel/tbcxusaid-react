@@ -101,6 +101,7 @@ async function Products(){
                             className="product-list scrollable -ml-3 -mr-3 flex justify-start flex-wrap h-450 overflow-y-scroll">
                             {
                                 productsData.map( (product : IProduct) =>
+                                    <Fragment key={product.id}>
                                     <Product id={product.id}
                                              price={product.price}
                                              thumbnail={product.thumbnail}
@@ -108,6 +109,7 @@ async function Products(){
                                              description={product.description}
                                              stock={product.stock}
                                     />
+                                    </Fragment>
                                 )
                             }
                         </div>
