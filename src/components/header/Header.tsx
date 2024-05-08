@@ -6,7 +6,7 @@ import UserArea from "../../components/header/UserArea";
 import {logOut} from "../../app/[locale]/actions";
 import {cookies} from "next/headers";
 import {AUTH_COOKIE_USERNAME} from "../../constants";
-import DarkModeSwitcher from "../../components/header/DarkModeSwitcher";
+import DarkModeSwitcher from "./DarkModeSwitcher";
 
 
 function Header(){

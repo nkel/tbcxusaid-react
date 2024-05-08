@@ -3,11 +3,12 @@ import {redirect} from "next/navigation";
 import {AUTH_COOKIE_KEY} from "../../../constants";
 import Header from "../../../components/header/Header";
 import Footer from "../../../components/footer/Footer";
+import {ReactElement} from "react";
 
-export default function DashboardLayout({ children }) {
+export default function DashboardLayout({ children }: {children: ReactElement}) {
     const cookieStore = cookies();
     if(cookieStore.get(AUTH_COOKIE_KEY) === undefined) {
-      redirect("/login");
+      redirect("login");
     }
 
     return (
