@@ -1,5 +1,5 @@
 import "./Stars.css";
-function Stars({ rating }){
+function Stars({ rating }:{rating: number}){
 
     return (
         <div className="stars">

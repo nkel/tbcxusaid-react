@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .container-center {
+    @apply container mx-auto pl-4 sm:pl-7 pr-4 sm:pr-7;
+  }
+}
+.scrollable::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollable::-webkit-scrollbar-track {
+  @apply bg-gray-f8;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+input:focus {
+  border: 0;
+  outline: 0;
+}
+
+.btn {
+  @apply inline-flex text-sm rounded-lg pt-2 pb-2 pl-4 pr-4 text-w;
+}
+
+body {
+  @apply bg-bg-f2
+}
+
+.card {
+  @apply bg-w rounded-xl shadow-3-20 overflow-hidden;
+}
+.card table {
+  @apply w-full text-center;
+}
+
+.card-header {
+ @apply flex justify-between items-center mb-10;
+}
+.card-header h2 {
+  @apply sm:text-xl md:text-2xl border-gray-e3 sm:border-opacity-0 p-4 sm:p-0;
+}
+
+.card--head {
+  @apply w-full text-gray-97 bg-gray-f8 text-xs;
+}
+.card--head th {
+  @apply pt-4 pb-4 font-normal;
+}
+
+.card--item {
+  border-bottom: 0.5px solid;
+  @apply border-gray-e3 text-sm;
+}
+.card--item:last-child {
+  border-bottom: 0 !important;
+}
+.card--item td {
+  @apply pt-4 pb-4 text-gray-97;
+}
+
+
