@@ -19,7 +19,6 @@ async function getBlog(id:number) {
 
 async function BlogDetails({ params: { id } } : {params: {id: number}}){
     const blogItem = await getBlog(id);
-
     return (
             <div className="flex page-detail flex-col" key={blogItem.id}>
                 <h2 className="font-bold text-3xl uppercase mb-12 text-bg-20 text-center dark:text-gray-f2">
@@ -40,7 +39,7 @@ async function BlogDetails({ params: { id } } : {params: {id: number}}){
                 </div>
                 <h3 className="font-bold uppercase mt-4 dark:text-gray-f2">Ingredientes</h3>
                 <ul className="flex justify-start flex-wrap">
-                    { blogItem.ingredients.map( ( item: string[] ) => <li className="btn bg-warning mr-3 mt-4 text-nowrap">{item}</li> ) }
+                    { blogItem.ingredients.map( ( item: string[], index:number ) => <li className="btn bg-warning mr-3 mt-4 text-nowrap" key={index}>{item}</li> ) }
                 </ul>
             </div>
     )
