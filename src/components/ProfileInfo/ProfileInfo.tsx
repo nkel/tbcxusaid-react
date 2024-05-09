@@ -10,7 +10,7 @@ function ProfileInfo() {
         confirmPassword: ''
     });
 
-    const handleChange = e => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setProfile(prevState => ({
             ...prevState,
             [e.target.name]: e.target.value

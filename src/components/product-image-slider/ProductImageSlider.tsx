@@ -6,9 +6,9 @@ import Image from "next/image";
 function ProductImageSlider({images}: {images: string[] }) {
 
      const [bigImage, setBigImage] = useState(images[0]);
-     const handleClick = (e: any ) => {
-         setBigImage(prevState => prevState = e.target.src);
-     }
+    const handleClick = (e: any) => {
+        setBigImage(() => e.target.src);
+    }
 
     return (
     <div className="image-gallery">

@@ -1,7 +1,7 @@
 'use client';
 import {useState} from "react";
 
-export default function LoginForm({handleLogin}){
+export default function LoginForm({handleLogin}: {handleLogin(username:string, password:string): void}){
     const [username, setUsername]=useState('');
     const [password, setPassword]=useState('');
     return (

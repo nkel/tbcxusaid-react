@@ -2,7 +2,7 @@
 import './UserArea.css';
 import {useState} from "react";
 import Link from "next/link";
-export default function UserArea({username, handleLogOut}){
+export default function UserArea({username, handleLogOut}:{username:string, handleLogOut():void}){
     const [active, setActive]= useState(false);
     const handleClick = ()=>{
         setActive(prevState => prevState=!prevState);
