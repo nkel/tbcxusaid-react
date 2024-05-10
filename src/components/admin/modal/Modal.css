@@ -1,0 +1,19 @@
+.modal-wrapper {
+    @apply fixed left-0 right-0 bottom-0 top-0 flex justify-center pt-40 bg-black bg-opacity-45 items-start;
+}
+.modal {
+    width: 600px;
+    height: auto;
+    @apply bg-w rounded-2xl;
+}
+.modal-head {
+    @apply p-4 border-b border-gray-97 border-opacity-30 border-solid relative font-bold flex justify-start text-black;
+}
+.modal-close{
+    @apply absolute;
+    right: 20px;
+    top: 14px;
+}
+.modal-content {
+    @apply p-4;
+}

@@ -1,0 +1,9 @@
+.modal.sm {
+    width: 300px;
+}
+.deleteBtn {
+    @apply rounded-md h-10 w-1/2 mr-1 bg-opacity-95 bg-bg-20 hover:bg-opacity-100 text-w;
+}
+.backBtn {
+    @apply rounded-md h-10 w-1/2 mr-1 text-w border border-solid border-bg-20 bg-bg-20 bg-opacity-60 hover:bg-opacity-70;
+}
