@@ -63,3 +63,23 @@ body {
 }
 
 
+.input-field {
+  @apply flex flex-col mb-4;
+}
+.input-field label {
+  @apply flex justify-start items-center text-sm text-gray-97;
+}
+.input-field.required label:after {
+  content: "*";
+  @apply text-error ml-2;
+}
+.input-field input {
+  @apply bg-w border border-solid border-gray-97 border-opacity-30 rounded-md h-10 mt-2 pl-3 pr-3;
+}
+.formSubmit {
+  @apply rounded-lg text-w text-sm w-full bg-bg-20 h-10 bg-opacity-95 hover:bg-opacity-100;
+}
+.formSubmit:disabled {
+  @apply bg-opacity-75;
+}
+

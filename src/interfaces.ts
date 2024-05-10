@@ -19,3 +19,11 @@ export interface IProduct {
     description: string,
     stock: number
 }
+
+export interface IUser {
+    id:number,
+    name: string,
+    email: string,
+    password: string,
+    confirmPassword?: string,
+}
